@@ -129,7 +129,7 @@ export class Invoice {
       const taxCategory = subtotal.ele('cac:TaxCategory');
       taxCategory.ele('cbc:ID').txt(subtotalElement.categoryId).up();
 
-      !!subtotalElement.taxPercentage && taxCategory.ele('cbc:Percent').txt(subtotalElement.taxPercentage.toFixed(0)).up();
+      subtotalElement.taxPercentage !== null && taxCategory.ele('cbc:Percent').txt(subtotalElement.taxPercentage.toFixed(0)).up();
 
       !!subtotalElement.taxExemptionReasonCode && taxCategory.ele('cbc:TaxExemptionReasonCode').txt(subtotalElement.taxExemptionReasonCode).up();
       !!subtotalElement.taxExemptionReason && taxCategory.ele('cbc:TaxExemptionReason').txt(subtotalElement.taxExemptionReason).up();
@@ -183,7 +183,7 @@ export class Invoice {
       const tax = item.ele('cac:ClassifiedTaxCategory');
       tax.ele('cbc:ID').txt(invoiceLine.item.tax.id).up();
 
-      !!invoiceLine.item.tax.taxPercentage && tax.ele('cbc:Percent').txt(invoiceLine.item.tax.taxPercentage.toFixed(2)).up();
+      invoiceLine.item.tax.taxPercentage !== null && tax.ele('cbc:Percent').txt(invoiceLine.item.tax.taxPercentage.toFixed(2)).up();
 
       tax.ele('cac:TaxScheme').ele('cbc:ID').txt(invoiceLine.item.tax.taxId).up().up();
 
