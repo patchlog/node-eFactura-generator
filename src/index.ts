@@ -183,7 +183,7 @@ export class Invoice {
       const tax = item.ele('cac:ClassifiedTaxCategory');
       tax.ele('cbc:ID').txt(invoiceLine.item.tax.id).up();
 
-      invoiceLine.item.tax.taxPercentage !== null && tax.ele('cbc:Percent').txt(invoiceLine.item.tax.taxPercentage.toFixed(2)).up();
+      invoiceLine.item.tax.taxPercentage !== null && tax.ele('cbc:Percent').txt(invoiceLine.item.tax.taxPercentage.toFixed(0)).up();
 
       tax.ele('cac:TaxScheme').ele('cbc:ID').txt(invoiceLine.item.tax.taxId).up().up();
 
