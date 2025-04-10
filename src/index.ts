@@ -277,7 +277,8 @@ export class Invoice {
     // OR 
     // the invoice lines have *at least one* item which does not support VAT, then the whole invoice shall not present any VAT data
     // *According to the CIUS-RO standard
-    const showVATData = !this.seller.taxRegistrationCode ? false : true ?? this.invoiceLines.reduce((_, curr) => curr.item.tax.taxPercentage === null ? false : true, true);
+    const showVATData = !!this.seller.taxRegistrationCode && 
+                        this.invoiceLines.every(line => line.item.tax.taxPercentage !== null);
 
     // Add the seller and buyer entities to the XML according to the validation rules
     const supplierParty = invoice.ele("cac:AccountingSupplierParty");
