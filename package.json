@@ -2,7 +2,7 @@
   "name": "node-e-factura-generator",
   "version": "1.0.5",
   "description": "Generator XML UBL 2.1 adaptat CIUS-RO pentru e Factura.",
-  "homepage": "https://github.com/Meriegg/node-eFactura-generator",
+  "homepage": "https://github.com/patchlog/node-eFactura-generator",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -31,7 +31,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Meriegg/node-eFactura-generator.git"
+    "url": "git+https://github.com/patchlog/node-eFactura-generator.git"
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
