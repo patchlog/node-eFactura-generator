@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "src"
+    "src/**/*"
   ],
   "scripts": {
     "watch": "tsc --watch",
