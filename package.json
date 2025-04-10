@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "files": [
     "tsconfig.json",
-    tsup.config.ts, 
+    "tsup.config.ts", 
     "dist",
     "src/**/*"
   ],
